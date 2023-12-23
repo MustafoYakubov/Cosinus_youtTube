@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* color: #fff; */
+}
+
 .category-btn:hover span {
     color: white !important;
 }
@@ -28,6 +35,10 @@
     margin: 10px 0px;
     border-radius: 20px;
     transition: all 0.3s ease;
+}
+
+#btn-primary:hover {
+    background-color: #FC1503;
 }
 
 @media screen and (max-width: 900px) {
