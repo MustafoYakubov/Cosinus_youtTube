@@ -8,9 +8,9 @@ const Feed = () => {
   const [videos, setVideos] = useState([]);
   useEffect(() => {
     fetchFromApi(`search?part=snippet&q=${selectedCategory}`).then((data) =>
-      setVideos(data.items)
+      setVideos(data?.items)
     );
-  }, [setSelectedCategory]);
+  }, [selectedCategory]);
   return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
       <Box
@@ -32,7 +32,7 @@ const Feed = () => {
           CopyRight 2023
         </Typography>
       </Box>
-      <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
+      <Box p={2} sx={{ overflowY: "auto", minHeight: "90vh", flex: 2 }}>
         <Typography
           variant="h4"
           fontWeight="bold"
